@@ -12,5 +12,20 @@ dependencies = [
     "prometheus-fastapi-instrumentator",
     "pytest",
     "pytest-asyncio",
-    "httpx",
+    "ruff",
 ]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 200
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+# E,F = erreurs basiques (pyflakes/pycodestyle)
+# I = imports
+# B = bugbear (pièges courants)
+# UP = modernisation python
+# SIM = simplifications
+
+[tool.ruff.format]
+quote-style = "double"
